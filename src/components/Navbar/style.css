@@ -1,1 +1,20 @@
 
+
+nav{
+    background-color: blue;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.home-link{
+    text-decoration: none;
+    color: black;
+}
+
+.active{
+    text-decoration: none;
+    color: white;
+
+}

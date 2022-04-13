@@ -7,8 +7,8 @@ const Navbar = () => {
     return (
         <nav>
             <NavLink className="home-link" to="/">Home</NavLink>
-            <NavLink activeclassname="active" to="about">About</NavLink>
-            <NavLink  to="search">Search</NavLink>
+            <NavLink className="home-link" activeclassname="active" to="about">About</NavLink>
+            <NavLink  className="home-link" to="search">Search</NavLink>
             <button onClick={() => goTo(-1)}>Back</button>
         </nav>
     );

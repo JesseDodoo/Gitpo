@@ -86,9 +86,9 @@ export default function Search() {
       <input type='text' placeholder='SearchRepos' value={userInput} onChange={SetSearchValue} />
       <input type="submit" value="Submit" />
     </form>
-
+    {renderImage()}
     <div id="repos">
     {renderRepos()}</div>
-    {renderImage()}</>)
+    </>)
 }
 
