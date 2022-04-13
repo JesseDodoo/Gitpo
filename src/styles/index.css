@@ -1,0 +1,14 @@
+img {
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
+#data {
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+    margin: 20px;
+}

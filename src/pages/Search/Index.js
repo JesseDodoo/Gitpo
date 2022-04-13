@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate as Navigate } from 'react-router-dom';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import '../../styles/index.css'
 
 export default function Search() {
 
@@ -58,8 +59,14 @@ export default function Search() {
   }
 
   function renderRepos () {
+
+
     return (
-      userOutput.map(output => <><a key={output.id} href={output.html_url}>{output.name},{output.forks_count}</a></>)
+      userOutput.map(output => <div id = 'data'>
+      <span id="repoName">Git Repo Name:<a key={output.id} href={output.html_url}>{output.name}</a></span>
+      <span>Forks:{output.forks_count}</span>
+      <span>Language:{output.language ? output.language : "None" }</span><span>Stargazers:{output.stargazers_count}</span>
+      <span>Watchers:{output.watchers_count}</span></div>)
       );
   }
 
@@ -80,8 +87,8 @@ export default function Search() {
       <input type="submit" value="Submit" />
     </form>
 
-
-    {renderRepos()}
+    <div id="repos">
+    {renderRepos()}</div>
     {renderImage()}</>)
 }
 
