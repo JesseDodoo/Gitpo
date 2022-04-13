@@ -44,7 +44,17 @@ const SetSearchValue = e => {
 };
 
 function renderRepos () {
-  return userOutput.map(output => <><a href={output.html_url}>{output.name},{output.forks_count}</a></>)
+  return (
+    userOutput.map(output => <><a key={output.id} href={output.html_url}>{output.name},{output.forks_count}</a></>)
+    );
+
+}
+
+function renderImage() {
+  let imageUrl;
+  userOutput.map(output => {imageUrl = output.owner.avatar_url})
+  {/*<img src={imageUrl}></img>*/}
+  return(<img src={imageUrl}></img>)
 
 }
 
@@ -55,6 +65,7 @@ function renderRepos () {
     <input type="submit" value="Submit" />
 </form>
 {renderRepos()}
+{renderImage()}
   </>)
 }
 
