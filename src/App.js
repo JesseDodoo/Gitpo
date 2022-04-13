@@ -11,7 +11,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Pages.Home />} />
           <Route path="/about" element={<Pages.About />} />
-          <Route path="/search" element={<Pages.Search />} />
+          <Route path="/search" element={<Pages.Search />}>
+          <Route path=":username" element={<Pages.Search />} />
+          </Route>
         </Routes>
       </main>
     </>
