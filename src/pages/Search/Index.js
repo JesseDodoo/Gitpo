@@ -62,8 +62,8 @@ export default function Search() {
 
 
     return (
-      userOutput.map(output => <div id = 'data'>
-      <span id="repoName">Git Repo Name:<a key={output.id} href={output.html_url}>{output.name}</a></span>
+      userOutput.map(output => <div key={output.id} id = 'data'>
+      <span id="repoName">Git Repo Name:<a href={output.html_url}>{output.name}</a></span>
       <span>Forks:{output.forks_count}</span>
       <span>Language:{output.language ? output.language : "None" }</span><span>Stargazers:{output.stargazers_count}</span>
       <span>Watchers:{output.watchers_count}</span></div>)
