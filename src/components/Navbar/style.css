@@ -1,9 +1,11 @@
 *{
     padding: 0;
     margin: 0;
+    
 }
 
 nav{
+    background-color: #95B8D1;
     padding: 10px;
     display: flex;
     justify-content: space-between;
